@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        .contact {
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            font-weight: bold;
+            color: white;
+        }
+
+        .my-card {
+            margin-bottom: 20px;
+        }
+
+        .my-card span {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contacts</h1>
+
+    <div class="my-card">
+        <div>AA</div>
+        <span>Adeoluwa Adegoke</span><br>
+        <small>My Card</small>
+    </div>
+
+    <input type="text" id="search" placeholder="Search" oninput="search()">
+
+    <div id="contacts-list"></div>
+
+ 
+</body>
+
+</html>
+
+<script>
+    const contacts = [
+        "A Alpho",
+        "A+ Gadget FCG",
+        "A.I Luminous",
+        "A.Z FCG",
+        "Aaron FCG",
+        "Abbey Fash",
+        "Abd Hameed FCG",
+        "Abdul Lateef",
+        "Abdul Roheem FCG",
+        "Abdul Sami'",
+        "Abdul Tawab",
+        "Alfa Abdullah",
+        "Abdullah Colmas"
+    ];
+
+    const contactsList = document.getElementById('contacts-list');
+
+    function displayContacts(list) {
+        contactsList.innerHTML = '';
+        list.forEach(contact => {
+  console.log(contact);
+  
+            contactsList.innerHTML += `<div class="contact">${contact}</div>`;
+        });
+    }
+
+    function search() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const filteredContacts = contacts.filter(contact => contact.toLowerCase().includes(query));
+        displayContacts(filteredContacts);
+    }
+
+    // Initial display
+    displayContacts(contacts);
+</script>

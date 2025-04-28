@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="photoapp.css">
+
+</head>
+
+<body>
+    <div class="iphone-frame">
+      
+        <div class="torch">
+            <button class="bond" onclick="myWay()">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+            </button>
+            <div class="torchs">
+                <ion-icon name="lock-closed" class="padlock"></ion-icon>
+            </div>
+        </div>
+
+        <div class="wide">
+            <div class="pick">
+                <h2>Library</h2>
+                <p>oct24-Nov6,2022</p>
+            </div>
+            <button class="choose">Select</button>
+        </div>
+        <div class="pictures">
+          
+        </div>
+        <div class="linear"></div>
+    </div>
+</body>
+
+</html>
+<script>
+
+let pictures = document.querySelector(".pictures")
+
+let myPictures = [
+  "IMG_0630.JPG",
+  "IMG_0632 - Copy.JPG",
+  "IMG_0635.JPG",
+  "IMG_0638 - Copy.JPG",
+  "IMG_0639 - Copy.JPG",
+  "IMG_0639.JPG",
+  "IMG_0640.JPG",
+  "IMG_0885.JPG",
+  "IMG_0886.JPG",
+  "IMG_0887.JPG",
+  "IMG_0888.JPG",
+  "IMG_0986.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+  "IMG_2019.JPG",
+  "IMG_2023.JPG",
+  "IMG_8749.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",  "IMG_0986.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+  "IMG_2019.JPG",
+  "IMG_2023.JPG",
+  "IMG_8749.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",  "IMG_0986.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+  "IMG_2019.JPG",
+  "IMG_2023.JPG",
+  "IMG_8749.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",  "IMG_0986.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+  "IMG_2019.JPG",
+  "IMG_2023.JPG",
+  "IMG_8749.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",
+  "IMG_E0900.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+  "IMG_2019.JPG",
+  "IMG_2023.JPG",
+  "IMG_8749.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",
+  "IMG_E0632.JPG",
+  "IMG_E0638.JPG",
+  "IMG_E0640.JPG",
+  "IMG_E0656.JPG",
+  "IMG_E0900.JPG",
+  "IMG_0988.JPG",
+  "IMG_0989.JPG",
+  "IMG_0990.JPG",
+  "IMG_0991.JPG",
+  "IMG_1643.JPG",
+]
+
+
+myPictures.forEach((picture, i)=> {
+   let img = document.createElement('img')
+   img.src = picture;
+   pictures.appendChild(img)
+
+
+   img.addEventListener("click", () => showCarousel(i));
+    });
+
+    function showCarousel(index) {
+        pictures.innerHTML = ""; 
+
+        const carouselDiv = document.createElement("div");
+        carouselDiv.classList.add("carousel");
+
+        const imgElement = document.createElement("img");
+        imgElement.style.width = "270px"
+        imgElement.style.height = "480px"
+
+        imgElement.src = myPictures[index];
+
+        const prevButton = document.createElement("button");
+        prevButton.textContent = "Prev";
+        prevButton.classList.add('previous')
+
+        prevButton.onclick = () => {
+            if (index > 0) showCarousel(index - 1);
+        };
+
+        const nextButton = document.createElement("button");
+        nextButton.textContent = "Next";
+
+        nextButton.classList.add('next')
+
+        nextButton.onclick = () => {
+            if (index < myPictures.length - 1) showCarousel(index + 1);
+        };
+
+        carouselDiv.appendChild(prevButton);
+        carouselDiv.appendChild(imgElement);
+        carouselDiv.appendChild(nextButton);
+        pictures.appendChild(carouselDiv);
+    }
+
+
+
+
+    function myWay(params) {
+window.location.href = 'Homescreen.html'
+    }
+</script>
+
+
+
+
+

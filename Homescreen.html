@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone clone</title>
+    <link rel="stylesheet" href="clone phone.css">
+    <link rel="stylesheet" href="Homescreen.css">
+    <link rel="stylesheet" href="passcoderep.css">
+     <link rel="stylesheet" href="whatsapp.css">
+     <link rel="stylesheet" href="Calculator.css">
+     <link rel="stylesheet" href="Dialing.css">
+    <link rel="stylesheet" href="callss.css">
+    <link rel="stylesheet" href="Song.css">
+    <script src="call.js"></script>
+    
+   
+</head>
+
+<body>
+
+
+    <div class="every-container">
+
+        <div class="iphoneframe">
+          
+         <div class="torchs">
+            <ion-icon name="lock-closed" class="padlock"></ion-icon>
+         </div>
+         <!-- <div class="application-menu"> -->
+            <div class="nav-icon">
+                <div class="right">
+                    <ion-icon name="cellular"></on-icon>
+                </div>
+                <div class="right">
+                    <ion-icon name="battery-half-outline"></ion-icon>
+                </div>
+                <div class="right">
+                    <ion-icon name="wifi-outline"></ion-icon>
+                </div>
+            </div>
+        <!-- </div>   -->
+        <p class="cal">12:56</p>
+
+        <div class="app-grid">
+         <div class="app">
+        <button><img src="facebooking-removebg-preview.png" alt="" style="width:110px; height: 60px;"></button> 
+            <span>facebook</span>
+         </div>
+         <div class="app">
+            <button><img src="Gmail-removebg-preview.png" alt=""></button>
+            <span>G-mail</span>
+         </div> 
+          <div class="app" id="box">
+<button onclick="myChat()"  class="hello-btn"><img src="whatsapp_logo-removebg-preview.png" alt="" style="width: 110px; height:60px;">
+   
+</button>
+<span>Whatsapp</span>
+         </div>  
+         <div class="app">
+<button><img src="snapchat.png" alt=""></button>
+            <span>Snapchat</span>
+         </div>  
+         <div class="app">
+            <button>  <img src="instagram-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
+            <span>Instagram</span>
+         </div> 
+          <div class="app">
+<button class="hello-btn" onclick="myMusic()"><img src="iphone_music-removebg-preview.png" alt="" style="width: 95px; height: 45px;"></button>
+            <span>Music</span>
+         </div> 
+          <div class="app">
+          <button>  <img src="i-book.png" alt="" style="width: 100px; height: 50px;"></button>
+            <span>i-book</span>
+         </div> 
+          <div class="app">
+<button> <img src="tiktoking.png" alt="" style="width: 95px; height:45px;"></button>
+            <span>Tiktok</span>
+         </div> 
+          <div class="app">
+<button><img src="googlemap.png" alt=""></button>
+            <span>Maps</span>
+         </div> 
+       
+         <div class="app" id="box">
+            <button class="hello-btn" onclick="myApp()"> <img src="photo.jpg" alt="" style="width: 95px; height: 45px;"></button>
+
+            <span>Photos</span>
+                     </div> 
+                        
+
+     
+          <div class="app"  id="box"> 
+<button class="hello-btn"  onclick="launchCamera() " ><img src="camera_app-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
+            <span>Camera</span>
+          </div> 
+           <div class="app"> 
+<button> <img src="twitter.webp" alt=""></button>
+            <span>X</span>
+         </div>  
+         <div class="app">  
+           <button> <img src="settings.jpg" alt="" style="width: 90px; height: 40px;"></button>
+            <span>Settings</span>
+         </div> 
+          <div class="app">
+<button><img src="note-removebg-preview.png" alt="" style="height: 35px; width: 85px;"></button>
+            <span>Note</span>
+         </div> 
+          <div class="app"> 
+            <button><img src="spotify.png" alt="" style="height:40px; width:90px;"></button>
+            <span>Spotify</span>
+         </div> 
+          <div class="app" id="box">
+            <button class="hello-btn" onclick="myCal()"><img src="calculator2-removebg-preview.png" alt="" style="height:60px; width:110px;"></button>
+            <span>calculator</span>
+         </div>  
+   
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+
+        
+        <div class="dock">
+            <div class="app" id="box">
+               <button class="hello-btn" onclick="openPhone()"> <img src="phone-removebg-preview.png" alt=""></button>
+                
+            </div>
+            <div class="app">
+               <button> <img src="images-removebg-preview.png" alt=""></button>
+             
+            </div>
+            <div class="app">
+               <button> <img src="images-removebg-preview (1).png" alt="" style="width: 100px; height: 50px;"></button>
+                
+            </div>
+            <div class="app" id="BOX">
+                <button class="hello-btn" onclick="myMusic()"><img src="iphone_music-removebg-preview.png" alt=""></button>
+   
+            </div>
+        </div>`
+ 
+    </div>
+   </body>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+
+
+<script>
+let iphoneframe = document.querySelector(".iphoneframe");
+
+function openPhone() {
+  iphoneframe.style.backgroundColor = "black"
+  iphoneframe.style.backgroundBlendMode = "darken"
+    iphoneframe.innerHTML = `
+        <div class="container">
+    <div class="buttons">
+    <button onclick="favorites()">Favourites</button>
+    <button onclick="recents()">Recents</button>
+    <button onclick="contact()">Contacts</button>
+    <button onclick="keypad()">Keypad</button>
+    <button onclick="voicemal()">Voicemail</button>
+    </div>
+    <main id="main">
+
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="editPopup">
+        <h3>Edit Contact</h3>
+        <input type="text" id="editName" placeholder="Enter new name">
+        <input type="text" id="editPhone" placeholder="Enter new phone">
+        <button onclick="saveEdit()">Save Changes</button>
+        <button onclick="closePopup()" style="background: red;">Cancel</button>
+    </
+    
+    `;
+    recents();
+
+}
+function myMusic() {
+    iphoneframe.innerHTML = `<div class="theContainer">
+      <button class="btn show-songs" onclick="toggleSongs()"><span  class="material-symbols-outlined">
+        menu
+        </span></button>
+      
+      <div class="custom-offcanvas" id="songsPanel">
+        <div class="header">
+        <input type="text" id="search" placeholder="Search" oninput="search()">
+
+          <h5>SONGS</h5>
+          <button onclick="toggleSongs()">X</button>
+        </div>
+        <div class="body" id="songsList">
+          <!-- Songs will appear here -->
+        </div>
+      </div>
+    </div>
+    <div class="section1">
+   
+    </div>
+    
+      <div class="section2">
+
+    <div id="musicDiv">
+      <img id="cover" src="" alt="">
+      <div class="description">
+        <p id="songTitle"></p>
+        <p id="artist"></p>
+      </div>
+     <div id="audioDiv">
+      <audio controls  type="audio/mpeg" id="song" src=""></audio>
+     </div>
+  
+    </div>
+    
+    <div class="musicButtons">
+      <button onclick="previousSong()">Previous</button>
+      <button class="hello-btn" onclick="nextSong()">Next</button>
+      <button id="shuffleButton">Shuffle</button>
+    </div>
+    
+    
+      </div>`
+
+
+      
+ 
+
+
+
+mySongs.forEach((song, i) => {
+   songsList.innerHTML += `<div onclick="playSong('${song.audio}')" class="bond">
+    <h3>${song.title}</h3>
+    <h6>${song.artist}</h6>
+    </div>`
+});
+
+
+function search() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const filteredSongs = mySongs.filter(song => song.title.toLocaleLowerCase().includes(query));
+        console.log(filteredSongs);
+        songsList.innerHTML = ''
+        filteredSongs.forEach((song, i) => {
+          console.log(i);
+          songsList.innerHTML += `<div onclick="playSong('${song.audio}')" class="bond">
+    <h3>${song.title}</h3>
+    <h6>${song.artist}</h6>
+    </div>`
+});
+    }
+
+  
+
+song.src = mySongs[currentIndex].audio;
+  songTitle.innerHTML = mySongs[currentIndex].title;
+  artist.innerHTML = mySongs[currentIndex].artist;
+  cover.src = mySongs[currentIndex].cover;
+
+
+
+
+
+// Function to shuffle the array
+
+
+// Function to toggle shuffle mode
+
+
+// Function to play a song from the current playlist
+
+
+// Attach shuffle toggle function to button
+document.getElementById("shuffleButton").addEventListener("click", toggleShuffle);
+}
+
+
+
+let mySongs = [
+  {
+    "title": "Feel",
+    "artist": "Davido",
+    "cover": "Davido img.jpg",
+    "audio": "./Davido-Feel-New-Song-(TrendyBeatz.com).mp3"
+  },
+
+  {
+    "title": "Lonely at the top",
+    "artist": "Asake",
+    "cover": "Asake img.jpg",
+    "audio": "Asake-Lonely-At-The-Top-(TrendyBeatz.com).mp3"
+  },
+
+  {
+    "title": "Dey-Play",
+    "artist": "Burna Boy",
+    "cover": "Burna boy.jpg",
+    "audio": "Burna-Boy-Dey-Play-(TrendyBeatz.com).mp3"
+  },
+  {
+    "title": "Woman",
+    "artist": "Simi",
+    "cover": "simi img.jpg",
+    "audio": "Simi-Woman-To-Woman-(TrendyBeatz.com).mp3"
+  }, 
+  {
+    "title": "Cana",
+    "artist": "Seyi-vibez",
+    "cover": "Seyi-vibez.jpg",
+    "audio": "Seyi-Vibez-Cana-(TrendyBeatz.com).mp3"
+  }, 
+  {
+    "title": "Ice on my Baby",
+    "artist": "Yung-Blue",
+    "cover": "Yung-Bleu.jpg",
+    "audio": "Yung_Bleu_-_Ice_On_My_Baby.mp3"
+  },
+   {
+    "title": "Felony",
+    "artist": "C-kay",
+    "cover": "C-kay.jpg",
+    "audio": "CKay-Felony-(TrendyBeatz.com).mp3"
+  },
+   {
+    "title": "On-the-Low",
+    "artist": "Burna Boy",
+    "cover": "Burna boy.jpg",
+    "audio": "Burna-Boy-On-The-Low-[TrendyBeatz.com].mp3"
+  }, 
+  {
+    "title": "No-Wahala",
+    "artist": "1da-Banton",
+    "cover": "1da-banton.jpg",
+    "audio": "1da-Banton-No-Wahala-(TrendyBeatz.com).mp3"
+  }, {
+    "title": "Cocaine",
+    "artist": "Dai-Verse",
+    "cover": "Dai-verse.jpg",
+    "audio": "Dai-Verse-Cocaine-(TrendyBeatz.com).mp3"
+  },
+   {
+    "title": "Awolowo",
+    "artist": "Fido",
+    "cover": "Fidi img.jpg",
+    "audio": "Fido-Awolowo-(TrendyBeatz.com).mp3"
+  },
+   {
+    "title": "Woman",
+    "artist": "Doja-Cat",
+    "cover": "doja image.jpg",
+    "audio": "Doja_Cat_-_Woman_CeeNaija.com_.mp3"
+  }, 
+  {
+    "title": "Uhh-Yeah",
+    "artist": "Asake",
+    "cover": "Asake img.jpg",
+    "audio": "Asake-Uhh-Yeahh-(TrendyBeatz.com).mp3"
+  },
+  {
+    "title": "Outside",
+    "artist": "Buju",
+    "cover": "Buju img.jpg",
+    "audio": "Buju-Outside-(TrendyBeatz.com).mp3 - Copy.crdownload"
+  }
+]
+
+let isShuffled = false; // Track shuffle state
+let shuffledSongs = [...mySongs]; // Default: normal order
+let currentIndex = 0; // Track the current song
+  
+
+
+
+function playSong(audioSrc) {
+  let songToPlay = mySongs.find(song => song.audio === audioSrc);
+  console.log(songToPlay);
+  
+  if (!songToPlay) return; // In case no song is found
+  
+  song.src = songToPlay.audio;
+  songTitle.innerHTML = songToPlay.title;
+  artist.innerHTML = songToPlay.artist;
+  cover.src = songToPlay.cover;
+  song.play();
+}
+
+// Function to play the next song
+function nextSong() {
+  let currentPlaylist = getCurrentPlaylist();
+  console.log(currentPlaylist);
+  
+  currentIndex = (currentIndex + 1) % currentPlaylist.length;
+  playSong(currentPlaylist[currentIndex].audio);
+}
+
+// Function to play the previous song
+function previousSong() {
+  let currentPlaylist = getCurrentPlaylist();
+  currentIndex = (currentIndex - 1 + currentPlaylist.length) % currentPlaylist.length;
+  playSong(currentPlaylist[currentIndex].audio);
+}
+
+
+function toggleShuffle() {
+  isShuffled = !isShuffled; // Toggle state
+console.log(isShuffled);
+
+  if (isShuffled) {
+    shuffledSongs = shuffleArray(mySongs); // Shuffle only when enabling shuffle
+    currentIndex = 0; // Reset to first shuffled song
+  } else {
+    currentIndex = 0; // Reset to first normal song
+  }
+
+  playSong(shuffledSongs[currentIndex].audio);
+}
+
+// Function to get the correct song list (shuffled or normal)
+function getCurrentPlaylist() {
+  return isShuffled ? shuffledSongs : mySongs;
+}
+
+function shuffleArray(songs) {
+  const copy = [...songs];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]]; // Swap elements
+  }
+  return copy;
+}
+
+
+function toggleSongs() {
+  const panel = document.getElementById("songsPanel");
+  panel.classList.toggle("active");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   function myChat() {
+   //    iphoneframe.style.backgroundBlendMode = "lighten";
+   //  iphoneframe.style.backgroundColor = "white";
+
+     iphoneframe.innerHTML = ` <main>
+        <div class="iphone-frame">
+            
+        <section>
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="first-div">
+                    <div class="circle1">
+                        <i id="circle1" class="fa-regular fa-circle"></i>
+                    </div>
+                    <div class="circle2">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <div class="circle3">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div> 
+            </nav>
+
+                            <h1 style >Chats</h1>
+                <button class="ai">
+                    <i id="circle" class="fa-regular fa-circle"></i>
+                    <input class="inp" type="text" placeholder="Ask Meta AI or Search">
+                </button>
+                <div class="second-div">
+                    <div class="box1">
+                        All
+                    </div>
+                    <div class="box2">
+                        Unread
+                    </div>
+                    <div class="box3">
+                        Favourites
+                    </div>
+                    <div class="box4">
+                        Groups
+                    </div>
+                </div>
+        
+                
+                <div class="archive">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <div class="archive1">
+                        <p>Archive </p>
+                        <p>195</p>
+                    </div>
+                </div>
+       
+       
+        </section>
+            
+
+    
+    <div class="mmm">
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Quadri</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Feyishara</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Olaide</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Bakare</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Sister from another mother</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Olayiwola</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Bolatito</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>katherine Roomate</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Classrep</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Global Twins</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Habibat</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Aminat po science</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Fathia</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div><div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Arikeade</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>OmoGbolahan</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Opeyemi</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Rahman</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+                
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Temiloluwa</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+                
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Khaleed</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Folashade</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Mujaidat</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+
+            <div class="message">
+                <div class="chat">
+                    <div class="img">IM</div>
+                </div>
+                <div class="message1">
+                    <div class="chat1">
+                        <p>Olagunju</p>
+                        <div class="chat2">
+                            <i id="icon" class="fa-solid fa-check-double"></i>
+                            <p>How are you doing?</p>
+                        </div>
+                    </div>
+                    <div class="time">
+                        1:25pm
+                    </div>
+                </div> 
+            </div>
+            n
+        </div>
+
+        <div class="last">
+                <button class="icn"><i class="fa-brands fa-whatsapp"></i>
+                <a href="Status.html">Status</a>
+                </button>                
+                <button class="icn"><i class="fa-solid fa-phone"></i>
+                   <a href="Call.html">Call</a>
+                </button>
+               
+                <button class="icn"><i class="fa-solid fa-people-group"></i>
+                <a href="Community.html">Community</a></i>
+                </button>
+                
+                <button class="icn"><i class="fa-regular fa-comments"></i>
+                <a href="">Chats</a>
+                </button>
+                
+                <button class="icn"><i class="fa-solid fa-gear"></i>
+                   <a href="Settings.html">Settings</a></button>
+               
+        </div>
+        </div>
+ 
+    </main>` 
+   }
+
+   
+   function myCal(params) {
+ iphoneframe.innerHTML = `
+    <div class="box-1">
+        <div id="display">
+          <span id="input1"></span>
+          <span id="inputsign"></span>
+          <span id="input2"></span>
+          <h1 id="showresult"></h1>
+        </div>
+        <div class="box-2">
+          <button style="background-color: lightgray" onclick="clr()">AC</button>
+          <button style="background-color: lightgray">+/_</button>
+          <button style="background-color: lightgray" onclick="getsign('%')">
+            %
+          </button>
+          <button style="background-color: orange" onclick="getsign('/')">
+            /
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('7')">7</button>
+          <button onclick="appendChar('8')">8</button>
+          <button onclick="appendChar('9')">9</button>
+          <button style="background-color: orange" onclick="getsign('*')">
+            x
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('4')">4</button>
+          <button onclick="appendChar('5')">5</button>
+          <button onclick="appendChar('6')">6</button>
+          <button style="background-color: orange" onclick="getsign('-')">
+            -
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('1')">1</button>
+          <button onclick="appendChar('2')">2</button>
+          <button onclick="appendChar('3')">3</button>
+          <button style="background-color: orange" onclick="getsign('+')">
+            +
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="del()">del</button>
+          <button onclick="appendChar('0')">0</button>
+          <button onclick="appendChar('.')">.</button>
+          <button onclick="equalsto()" style="background-color: orange">=</button>
+        </div>
+      </div>
+ `
+   }
+</script>
+
+
+<script>
+    let dis = document.getElementById("display");
+    let dis1 = document.getElementById("display").value;
+    let allvalue;
+    let result = 0;
+  
+    function appendChar(char) {
+      if (
+        inputsign.innerText.includes("+") ||
+        inputsign.innerText.includes("-") ||
+        inputsign.innerText.includes("*") ||
+        inputsign.innerText.includes("/")
+      ) {
+        input2.innerText += char;
+      } else {
+        input1.innerText += char;
+      }
+    }
+  
+    function calculate() {
+      if (inputsign.innerText.includes("+")) {
+        allvalue = display.innerText.trim().split("+");
+        result = parseInt(allvalue[0]) + parseInt(allvalue[1]);
+        showresult.innerText = result;
+        displayresult();
+      } else if (inputsign.innerText.includes("-")) {
+        allvalue = display.innerText.trim().split("-");
+        result = parseInt(allvalue[0]) - parseInt(allvalue[1]);
+        showresult.innerText = result;
+        displayresult();
+      } else if (inputsign.innerText.includes("*")) {
+        allvalue = display.innerText.trim().split("*");
+        result = parseInt(allvalue[0]) * parseInt(allvalue[1]);
+        showresult.innerText = result;
+        displayresult();
+      } else if (inputsign.innerText.includes("/")) {
+        allvalue = display.innerText.trim().split("/");
+        result = parseInt(allvalue[0]) / parseInt(allvalue[1]);
+        showresult.innerText = result;
+        displayresult();
+      } else if (inputsign.innerText.includes("%")) {
+        allvalue = display.innerText.trim().split("%");
+        result = parseInt(allvalue[0]) / 100;
+        showresult.innerText = result;
+        displayresult();
+      }
+    }
+  
+    function getsign(sign) {
+      if (inputsign.innerText == "") {
+        inputsign.innerText = sign;
+      } else {
+        calculate();
+      }
+    }
+  
+    function displayresult() {
+      input1.innerText = showresult.innerText;
+      input2.innerText = "";
+      inputsign.innerText = "";
+    }
+  
+    function equalsto() {
+      calculate();
+    }
+  
+    function clr() {
+      input1.innerText = "";
+      input2.innerText = "";
+      inputsign.innerText = "";
+      showresult.innerText = "";
+    }
+
+     function myReach() {
+        let iphoneframe = document.querySelector(".iphoneframe");
+    iphoneframe.style.backgroundBlendMode = "darken";
+    iphoneframe.style.backgroundColor = "black";
+       iphoneframe.innerHTML = `   <div class="much">
+        <p class="timer">12:24</p>
+        <div class="nav-icon">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <div class="right">
+                <ion-icon name="cellular"></on-icon>
+            </div>
+            <div class="right">
+                <ion-icon name="battery-half-outline"></ion-icon>
+            </div>
+            <div class="right">
+                <ion-icon name="wifi-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="fine">
+    
+    </div>
+ 
+    
+   <div class="header">
+    <p class="blue">Edit</p>
+   
+       <div class="jam">
+        <button class="dark">All</button>
+        <button class="light">Missed</button> 
+       </div>
+      </div> 
+  
+     
+     <div class="iron">
+
+      
+          <h1 class="head">Recents</h1>
+          <div class="search-bar">
+            <input type="text" placeholder="Search">
+    
+          </div>
+        <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mpobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="land">
+        
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details"> Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div><div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+         <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>  <div class="call-list">
+            <div class="call">
+              <img src="IMG_1642.JPG" alt="">
+              <div class="call-info">
+                  <p class="name">mum (2)</p>
+                  <p class="details">Mobile .yesterday</p>
+              </div>
+              <span class="material-symbols-outlined">
+                  info
+                  </span>
+            </div>
+         </div>
+          
+
+      
+        
+     </div>
+<div class="patty">
+    <div class="pat">
+        <span class="material-symbols-outlined">
+            star
+            </span>
+            <p>Favorites</p>
+     </div>  
+     <div class="pat">
+        <span class="material-symbols-outlined">
+            schedule
+            </span>
+            <p>Favorites</p>
+     </div>    <div class="pat">
+        <span class="material-symbols-outlined">
+            account_circle
+            </span>
+            <p>Favorites</p>
+     </div>    <div class="pat">
+        <span class="material-symbols-outlined">
+            apps
+            </span>
+            <p>Favorites</p>
+     </div>    <div class="pat">
+        <span class="material-symbols-outlined">
+            voicemail
+            </span>
+            <p>Favorites</p>
+     </div>
+</div>  `
+    
+     }
+  
+    // clear();
+  
+    // function sum(plus) {
+    //   display.value += plus;
+    // }
+  
+    // function equalsto() {
+    //   let add = 0;
+    //   if (display.value.includes("+")) {
+    //     let val = display.value.split("+");
+    //     console.log(val);
+    //     for (let index = 0; index < val.length; index++) {
+    //       const element = val[index];
+    //       console.log(element);
+    //       add = add + parseInt(element);
+    //     }
+    //   }
+    //   console.log(add);
+    // }
+  
+    // function sub(minus) {
+    //   display.value += minus;
+    // }
+  
+    // function equalsto() {
+    //   let minus = 0;
+    //   if (display.value.includes("-")) {
+    //     let val = display.value.split("-");
+    //     console.log(val);
+    //     for (let index = 0; index < val.length; index++) {
+    //       const element = val[index];
+    //       if (index === 0) {
+    //         minus = parseInt(element);
+    //       } else {
+    //         minus = minus - parseInt(element);
+    //       }
+    //       // const element = val[index];
+    //       // console.log(element);
+    //       // minus = minus - parseInt(element);
+    //     }
+    //   }
+    //   console.log(minus);
+    // }
+  </script>
+
+
+<script>
+
+function launchCamera() {
+    let iphoneframe = document.querySelector(".iphoneframe");
+
+    iphoneframe.innerHTML = `
+    <video id="video" autoplay playsinline></video>
+    <button id="capture">Take Photo</button>
+    <canvas id="canvas"></canvas>
+    <img id="photo" alt="Captured Photo">
+    `
+
+
+    const video = document.getElementById("video");
+    const canvas = document.getElementById("canvas");
+    const photo = document.getElementById("photo");
+    const captureBtn = document.getElementById("capture");
+    let stream = null;
+
+    // Start Camera
+    async function startCamera() {
+        try {
+            stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
+        } catch (error) {
+            console.error("Error accessing camera:", error);
+        }
+    }
+
+    // Capture Photo
+    captureBtn.addEventListener("click", () => {
+        const context = canvas.getContext("2d");
+
+        const iphoneWidth = 290;
+            const iphoneHeight = 300;
+            
+            canvas.width = iphoneWidth
+            canvas.height = iphoneHeight;
+
+            
+   
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        // Convert to image
+        const imageData = canvas.toDataURL("image/png");
+        photo.src = imageData;
+    });
+
+    startCamera();
+}
+</script>
+
+
+

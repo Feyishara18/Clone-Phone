@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        #lock {
+            height: 90vh;
+            width: 250px;
+            background-color: #ccc;
+            border-radius: 50px;
+            padding: 10px;
+            border: 10px solid black;
+            background-image: url(timmy.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-attachment: fixed; */
+            background-size: cover;
+        }
+
+        #pass {
+            height: 90vh;
+            width: 250px;
+            background-color: #3a3333;
+            border-radius: 50px;
+            padding: 10px;
+            border: 10px solid black;
+        }
+
+        #homepage {
+            height: 90vh;
+            width: 250px;
+            background-color: red;
+            border-radius: 50px;
+            padding: 10px;
+            border: 10px solid black;
+            background-image: url(timmy.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-attachment: fixed; */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #screen {
+            height: 90vh;
+            width: 250px;
+            background-color: #2e2e2e;
+            border-radius: 50px;
+            padding: 10px;
+            border: 10px solid black;
+        }
+
+        main {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            height: 90vh;
+
+        }
+
+        .censor {
+            width: 80px;
+            background-color: black;
+            height: 20px;
+            margin: auto;
+            /* transform: translateY(10px); */
+            border-radius: 20px;
+        }
+
+        .one {
+            width: 30px;
+            background-color: rgb(54, 51, 51);
+        }
+
+        .num {
+            border: 0;
+            outline: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: -8px -8px 15px rgba(225, 225, 225, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+            background: transparent;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+
+        }
+
+        .code {
+            transform: translateY(100px);
+        }
+
+        .pin {
+            transform: translateY(50px);
+            color: white;
+        }
+
+        .locks {
+            width: 150px;
+            height: 5px;
+            border-radius: 10px;
+            background: white;
+            border: none;
+            /* margin: auto; */
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .lockdiv {
+            /* transform: translateY(490px); */
+            /* position: absolute; */
+            /* bottom: 30px; */
+            width: 150px;
+            margin: auto;
+
+
+
+        }
+
+        .flex {
+            display: flex;
+            /* align-items: center; */
+
+        }
+
+        .togg {
+            rotate: 90deg;
+            transform: translateY(329px);
+            /* position: absolute; */
+            margin-top: -150px;
+
+        }
+
+        .pin button {
+            border-radius: 50%;
+            height: 14px;
+            border: solid white 1px;
+            background: none;
+        }
+
+        .up {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+
+        }
+
+        .network {
+            font-size: 8px;
+            /* background-color: aqua; */
+        }
+
+        .battery {
+            display: flex;
+            font-size: 10px;
+            gap: 3px;
+            align-items: center;
+        }
+
+        .battery span {
+            font-size: 15px;
+        }
+
+        .time {
+            font-size: 50px;
+            color: white;
+        }
+
+        #clock {
+            font-size: 15px;
+        }
+
+        .time-lock {
+            display: flex;
+            flex-direction: column;
+            gap: 410px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- <div>
+            <button onclick="toggle()">power btn</button>
+        </div> -->
+        <div class="flex">
+            <div>
+                <div id="screen">
+
+                </div>
+                <div id="lock">
+                    <div class="up">
+                        <div class="network">
+                            <marquee behavior="" direction="right">
+                                <p>MTN Nigeria</p>
+                            </marquee>
+                        </div>
+                        <div class="censor">
+                            <div class="one">
+
+                            </div>
+                            <div class="two">
+
+                            </div>
+                            <div class="three">
+
+                            </div>
+                        </div>
+                        <div class="battery">
+                            <span class="material-symbols-outlined">signal_cellular_alt</span>
+                            <p>LTE</p>
+                            <span class="material-symbols-outlined">battery_full_alt</span>
+                        </div>
+                        <!-- <div class="lockdiv">
+                            <button class="locks" onclick="lockS()"></button>
+                        </div> -->
+                    </div>
+                    <div>
+                        <h2 id="date"></h2>
+                    </div>
+                    <div class="time-lock">
+
+                        <div class="time">
+                            <span id="hrs">00</span>
+                            <span>:</span>
+                            <span id="mins">00</span>
+                        </div>
+
+                        <div class="lockdiv">
+                            <button class="locks" onclick="lockS()"></button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="pass">
+                    <div class="up">
+                        <div class="network">
+                            <marquee behavior="" direction="right">
+                                <p>MTN Nigeria</p>
+                            </marquee>
+                        </div>
+                        <div class="censor">
+                            <div class="one">
+
+                            </div>
+                            <div class="two">
+
+                            </div>
+                            <div class="three">
+
+                            </div>
+                        </div>
+                        <div class="battery">
+                            <span class="material-symbols-outlined">signal_cellular_alt</span>
+                            <p>LTE</p>
+                            <span class="material-symbols-outlined">battery_full_alt</span>
+                        </div>
+                        <!-- <div class="lockdiv">
+                            <button class="locks" onclick="lockS()"></button>
+                        </div> -->
+                    </div>
+
+                    <div>
+                        <div class="pin">
+
+                            <p>Enter Passcode</p>
+                           
+                            <input id="passwordInput" type="number">
+
+                        </div> 
+                        <div class="code">
+                            <button class="num" value="1" onclick="numm(event)">1</button>
+                            <button class="num" value="2" onclick="numm(event)">2</button>
+                            <button class="num" value="3" onclick="numm(event)">3</button>
+                            <button class="num" value="4" onclick="numm(event)">4</button>
+                            <button class="num" value="5" onclick="numm(event)">5</button>
+                            <button class="num" value="6" onclick="numm(event)">6</button>
+                            <button class="num" value="7" onclick="numm(event)">7</button>
+                            <button class="num" value="8" onclick="numm(event)">8</button>
+                            <button class="num" value="9" onclick="numm(event)">9</button>
+                            <button class="num" value="0" onclick="numm(event)">0</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="homepage">
+                    <div class="up">
+                        <div id="clock" class="time">
+                            <span id="hrss">00</span>
+                            <span>:</span>
+                            <span id="minss">00</span>
+                        </div>
+                        <div class="censor">
+                            <div class="one">
+
+                            </div>
+                            <div class="two">
+
+                            </div>
+                            <div class="three">
+
+                            </div>
+                        </div>
+                        <div class="battery">
+                            <span class="material-symbols-outlined">signal_cellular_alt</span>
+                            <p>LTE</p>
+                            <span class="material-symbols-outlined">battery_full_alt</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="togg">
+            <button onclick="toggle()"></button>
+        </div>
+
+        </div>
+
+    </main>
+</body>
+
+</html>
+<script>
+    let lock = document.getElementById('lock')
+    let homepage = document.getElementById('homepage')
+    let pass = document.getElementById('pass')
+    let timmy = document.getElementsByName('timmy')
+    let screenpage = document.getElementById('screen')
+    let passwordInput = document.getElementById("passwordInput")
+    let hrs = document.getElementById('hrs')
+    let mins = document.getElementById('mins')
+
+    let hrss = document.getElementById('hrss')
+    let minss = document.getElementById('minss')
+
+    console.log(timmy);
+    
+
+    let ind = 0
+    lock.style.display = 'none'
+    pass.style.display = 'none'
+    homepage.style.display = 'none'
+    screenpage.style.display = 'block'
+    passwordInput.style.display = 'none'
+    setInterval(() => {
+        let currentTime = new Date()
+        hrs.innerHTML = currentTime.getHours()
+        mins.innerHTML = currentTime.getMinutes()
+        hrss.innerHTML = currentTime.getHours()
+        minss.innerHTML = currentTime.getMinutes()
+        day.innerHTML = today.getMonth()
+        month.innerHTML = currentTime.getFullYear()
+        date.innerHTML = currentTime.getDate()
+    }, 1000);
+
+
+
+
+
+
+    function toggle() {
+        if (screenpage.style.display == 'block') {
+            screenpage.style.display = 'none'
+            lock.style.display = 'block'
+            pass.style.display = 'none'
+            homepage.style.display = 'none'
+            // passwordInput.value = ""
+            // timmy.style.backgroundColor = 'none';
+
+        } else {
+            screenpage.style.display = 'block'
+            lock.style.display = 'none'
+            pass.style.display = 'none'
+            homepage.style.display = 'none'
+
+
+
+        }
+        timmy[0].style.backgroundColor = "";
+        timmy[1].style.backgroundColor = "";
+        timmy[2].style.backgroundColor = "";
+        timmy[3].style.backgroundColor = "";
+
+
+    }
+    function lockS() {
+        if (lock.style.display == 'block') {
+            lock.style.display = 'none'
+            pass.style.display = 'block'
+
+        } else {
+
+        }
+    }
+    function numm(tim) {
+        timmy[ind].style.backgroundColor = 'white'
+        ind++
+        passwordInput.value += tim.target.value
+
+        if (passwordInput.value == "0506") {
+            // alert("correct password")
+            homepage.style.display = 'block'
+            lock.style.display = 'none'
+            pass.style.display = 'none'
+            screenpage.style.display = 'none'
+            passwordInput.value = ""
+            ind = 0
+        }
+
+
+    }
+
+</script>

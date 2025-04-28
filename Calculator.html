@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        /* background-color: blue; */
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+      }
+
+      .box-1 {
+        height: 460px;
+        width: 300px;
+        background-color: black;
+        border-radius: 20px;
+      }
+      #display {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px 20px 0 0;
+        color: white;
+        padding: 10px;
+      }
+
+      .box-2 {
+        width: 100%;
+        height: 72px;
+        /* background-color: red; */
+        /* border-bottom: 1px solid white; */
+        display: flex;
+        gap: 10px;
+        /* padding-left: 10px; */
+        padding-top: 5px;
+        justify-content: center;
+      }
+
+      .box-2 button {
+        height: 60px;
+        width: 20%;
+        border-radius: 50px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: gray;
+      }
+      #cont {
+        color: white;
+      }
+      button{
+        color:white;
+        font-size:30px
+      }
+    </style>
+  </head>
+  <body>
+ <div class="iphoneframe">
+    <div class="box-1">
+        <div id="display">
+          <span id="input1"></span>
+          <span id="inputsign"></span>
+          <span id="input2"></span>
+          <h1 id="showresult"></h1>
+        </div>
+        <div class="box-2">
+          <button style="background-color: lightgray" onclick="clr()">AC</button>
+          <button style="background-color: lightgray">+/_</button>
+          <button style="background-color: lightgray" onclick="getsign('%')">
+            %
+          </button>
+          <button style="background-color: orange" onclick="getsign('/')">
+            /
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('7')">7</button>
+          <button onclick="appendChar('8')">8</button>
+          <button onclick="appendChar('9')">9</button>
+          <button style="background-color: orange" onclick="getsign('*')">
+            x
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('4')">4</button>
+          <button onclick="appendChar('5')">5</button>
+          <button onclick="appendChar('6')">6</button>
+          <button style="background-color: orange" onclick="getsign('-')">
+            -
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="appendChar('1')">1</button>
+          <button onclick="appendChar('2')">2</button>
+          <button onclick="appendChar('3')">3</button>
+          <button style="background-color: orange" onclick="getsign('+')">
+            +
+          </button>
+        </div>
+        <div class="box-2">
+          <button onclick="del()">del</button>
+          <button onclick="appendChar('0')">0</button>
+          <button onclick="appendChar('.')">.</button>
+          <button onclick="equalsto()" style="background-color: orange">=</button>
+        </div>
+      </div>
+ </div>
+  </body>
+</html>
+<script>
+  let dis = document.getElementById("display");
+  let dis1 = document.getElementById("display").value;
+  let allvalue;
+  let result = 0;
+
+  function appendChar(char) {
+    if (
+      inputsign.innerText.includes("+") ||
+      inputsign.innerText.includes("-") ||
+      inputsign.innerText.includes("*") ||
+      inputsign.innerText.includes("/")
+    ) {
+      input2.innerText += char;
+    } else {
+      input1.innerText += char;
+    }
+  }
+
+  function calculate() {
+    if (inputsign.innerText.includes("+")) {
+      allvalue = display.innerText.trim().split("+");
+      result = parseInt(allvalue[0]) + parseInt(allvalue[1]);
+      showresult.innerText = result;
+      displayresult();
+    } else if (inputsign.innerText.includes("-")) {
+      allvalue = display.innerText.trim().split("-");
+      result = parseInt(allvalue[0]) - parseInt(allvalue[1]);
+      showresult.innerText = result;
+      displayresult();
+    } else if (inputsign.innerText.includes("*")) {
+      allvalue = display.innerText.trim().split("*");
+      result = parseInt(allvalue[0]) * parseInt(allvalue[1]);
+      showresult.innerText = result;
+      displayresult();
+    } else if (inputsign.innerText.includes("/")) {
+      allvalue = display.innerText.trim().split("/");
+      result = parseInt(allvalue[0]) / parseInt(allvalue[1]);
+      showresult.innerText = result;
+      displayresult();
+    } else if (inputsign.innerText.includes("%")) {
+      allvalue = display.innerText.trim().split("%");
+      result = parseInt(allvalue[0]) / 100;
+      showresult.innerText = result;
+      displayresult();
+    }
+  }
+
+  function getsign(sign) {
+    if (inputsign.innerText == "") {
+      inputsign.innerText = sign;
+    } else {
+      calculate();
+    }
+  }
+
+  function displayresult() {
+    input1.innerText = showresult.innerText;
+    input2.innerText = "";
+    inputsign.innerText = "";
+  }
+
+  function equalsto() {
+    calculate();
+  }
+
+  function clr() {
+    input1.innerText = "";
+    input2.innerText = "";
+    inputsign.innerText = "";
+    showresult.innerText = "";
+  }
+
+  // clear();
+
+  // function sum(plus) {
+  //   display.value += plus;
+  // }
+
+  // function equalsto() {
+  //   let add = 0;
+  //   if (display.value.includes("+")) {
+  //     let val = display.value.split("+");
+  //     console.log(val);
+  //     for (let index = 0; index < val.length; index++) {
+  //       const element = val[index];
+  //       console.log(element);
+  //       add = add + parseInt(element);
+  //     }
+  //   }
+  //   console.log(add);
+  // }
+
+  // function sub(minus) {
+  //   display.value += minus;
+  // }
+
+  // function equalsto() {
+  //   let minus = 0;
+  //   if (display.value.includes("-")) {
+  //     let val = display.value.split("-");
+  //     console.log(val);
+  //     for (let index = 0; index < val.length; index++) {
+  //       const element = val[index];
+  //       if (index === 0) {
+  //         minus = parseInt(element);
+  //       } else {
+  //         minus = minus - parseInt(element);
+  //       }
+  //       // const element = val[index];
+  //       // console.log(element);
+  //       // minus = minus - parseInt(element);
+  //     }
+  //   }
+  //   console.log(minus);
+  // }
+</script>

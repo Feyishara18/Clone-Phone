@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: .8s;
+}
+
+body{
+    display:flex;
+    transition: .8s;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family:poppins;
+}
+ .every-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: brown; 
+
+} 
+ .iphoneframe{
+    background-color: white;
+    background-image: url(iphone-leaf.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:570px;
+    position:relative;
+    overflow: hidden;
+    width:300px;
+    border: 8px solid black;
+    border-radius: 40px;
+   box-sizing: border-box; 
+    box-shadow: 0px 0px 0px 0px black;
+ } 
+ .torchs {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   height: 22px;
+   width: 100px;
+ border-radius: 20px;
+   background-color: black;
+   margin-top:13px;
+   margin-right: 40px;
+ 
+}  
+.torchs .padlock{
+   color: white;
+   font-size:14px;
+   margin-top: 4px;
+   padding-left: 4px;
+ }
+
+ #box{
+   height: 70px;
+}
+
+#box span{
+   margin-top: 50px;
+}
+
+ /* .torch .rounded{
+    position: relative;
+ }
+ .torch::before{
+    content: ; 
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    height: 4px;
+    width: 30px;
+    border-radius: 10px;
+    border:0.03cm solid black;
+    box-shadow: blue;
+
+ } */
+  .src-lockscreen-nav{
+   margin: 20px;
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+   text-align: center;
+   color: white;
+   font-size: 15px;
+   cursor: pointer;
+   background-color: black;
+  }
+
+ .lock-screen{
+     /* background-color: blue;  */
+    width:100%;
+    position: absolute;
+    left: 0;
+    padding-right: 15px;
+    text-align: left;
+ }
+ .open-button{
+   color: white;
+   margin-bottom:15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ nav{
+   position: absolute;
+   top: 5px;
+   width: 100%;
+   height: 30px;
+   left: 0;
+   z-index: 101;
+   
+ }
+
+ .line{
+   width: 100px;
+   background-color: white;
+   height:40px;
+   border-radius: 30px;
+   margin-left:90px;
+   border: none;
+   bottom: 0;
+   margin-bottom: 50px;
+   text-align: center;
+   cursor: pointer;
+   /* margin: auto; */
+ }
+ .long{
+   display: flex;
+   justify-content:center;
+   background-color: transparent;
+   border: none;
+
+ }
+ h1{
+   color: white;
+   font-size:50px;
+   /* margin-top:20px; */
+   /* background-color: green; */
+ }
+ .side-button{
+   width: 12px;
+   height:66px;
+   background-color:rgb(206, 241, 252);
+    border-radius: 10px;
+   /* border: none; */
+   /* float: right; */
+   position: absolute;
+    margin-left:302px;
+    margin-bottom:254px;
+ }
+ 
+   .right{
+      display: flex;
+      /* background-color:purple; */
+      /* float: left; */
+  
+   }
+   .right span{
+      color: white;
+      /* margin-right:100px; */
+      /* padding-right:150px; */
+   }
+.pok{
+   width: 50px;
+   margin-top:10px;
+   font-size:10px;
+}
+
+.timing{
+   margin-top: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   color: blue;
+}
+.timing span{
+   color: white;
+   font-size:16px;
+}
+#time{
+   font-size:40px;
+}
+  
+/* .time span{
+   min-width: 200px;
+} */
+   .nav-icon{
+      display: flex;
+     
+   
+      /* float: right; */
+   }
+
+
+   label{
+      color:black;
+      font-size: 16px;
+   }
+   .twice{
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      gap: 50px;
+   }
+   .lefty{
+      display: flex;
+      justify-content: space-around;
+      gap:120px;
+      margin-top:340px;
+      align-items: center;
+      /* background-color: red; */
+      padding-left: 20px;
+   }
+  .olaw{
+   width: 100%;
+   overflow: hidden;
+   white-space: nowwrap;
+   /* background:black; */
+   color: white;
+   font-size:10px;
+   padding: 10px 0;
+   position: relative;
+  }
+  .pok{
+   display: inline-block;
+   animation: olaw 10s linear infinite;
+   display: flex;
+   gap: 20px;
+  }
+  @keyframes olaw {
+   from{
+      transform: translate(100%);
+   }
+   to{
+      transform: translate(-90%);
+   }
+   
+  }
+   .lefty button{
+      width:45px;
+      border-radius:50px;
+      height:45px;
+      background-color: rgba(78, 76, 85, 0.441);
+      border: none;
+      font-size:22px;
+      color: white;
+   }
+   .run{
+      transform: rotate(-45deg);
+      /* display: flex; */
+   }
+   .bond{
+      background-color: purple
+   }
+   .run span{
+      color:white;
+      transform: rotate(45deg);
+      font-size:30px;
+   }
+   .application-menu{
+      /* transform: scale(1.6); */
+      z-index: 3;
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      visibility: visible;
+   }
+   .application-menu:active{
+      transform: scale(1);
+      visibility: visible;
+   }
+   .bottom{
+      position: absolute;
+      bottom: 10px;
+      width: 250px;
+      height: fit-content;
+      left: 0;
+      margin: 10px;
+      border-radius:8px;
+      padding: 6px 6px;
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(109, 103, 103);
+   }
+   .bottom .butter{
+      width: fit-content;
+      line-height: 48px;
+      cursor: pointer;
+      height: 40px;
+      width:40px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      font-size:32px;
+   }
+   #slide-1{
+      position:absolute;
+      top: 45px;
+      width: 100%;
+      transition: .7s;
+      left: 0;
+   }
+   #slide-1 :nth-child(2){
+      left: 300px ;
+   }
+   #slide-1 .icon{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: .8s;
+   }
+   #slide-1 .icon button{
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      font-size: 25px;
+      transform: .8s;
+      border: 0;
+      line-height: 20px;
+      border-radius: 10px;
+   }
+   #slide-1 .icon label{
+      font-size:14px;
+      margin-top: 2px;
+      color: white;
+   }
+
+   .applications{
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: .7s;
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+   }
+   .icon-sect{
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+      justify-content:space-evenly;
+      
+   }
+  
+   .camera-message{
+     background-color:rgb(176, 163, 163); 
+   }
+   .second{
+      position: absolute;
+      bottom: 10px;
+      width: 250px;
+      height: fit-content;
+      left: 0;
+      margin: 10px;
+      border-radius:8px;
+      padding: 6px 6px;
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(109, 103, 103);
+      flex-wrap: wrap;
+   }
+  .iconic{
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   font-size:50px;
+  }
+   .second.iconic{
+      width: fit-content;
+      line-height: 48px;
+      cursor: pointer;
+      height: 40px;
+      width:40px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      font-size:32px;
+   }
+   .third{
+      position: absolute;
+      bottom: 10px;
+      width: 250px;
+      height: fit-content;
+      left: 0;
+      margin: 10px;
+      border-radius:8px;
+      padding: 6px 6px;
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(109, 103, 103);
+   }
+   .happen{
+      display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   font-size:50px;
+   }
+   .third .happen{
+      width: fit-content;
+      line-height: 48px;
+      cursor: pointer;
+      height: 40px;
+      width:40px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      font-size:32px;
+   }
+
+   .hello-btn{
+     position: absolute;
+     z-index: 1000;
+   }
+
+
+/* passcoden styles */
+
+
+
+

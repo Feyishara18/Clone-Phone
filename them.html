@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        /* font-size: 20px; */
+    }
+    .musicButtons {
+        display: flex;
+        gap:50px;
+        margin: auto;
+    }
+    .different{
+     color: white;
+    }
+    span{
+        font-size:50px;
+        background-color: red;
+        /* gap: 20px; */
+        /* display: flex; */
+        /* justify-content: space-between; */
+        /* width:50%; */
+    }
+</style>
+<body>
+    <div class="musicButtons">
+       <button id=""> <span class="material-symbols-outlined">
+        shuffle
+        </span></button>
+        <button onclick="previousSong()"><span class="material-symbols-outlined">
+          skip_previous
+          </span></button>
+       <button class="different"><span class="material-symbols-outlined">
+        play_circle
+        </span></button>
+        <button class="hello-btn" onclick="nextSong()">
+            <span class="material-symbols-outlined">
+                skip_next
+                </span>
+        </button>
+          <span class="material-symbols-outlined">
+            autorenew
+            </span>
+      </div>
+</body>
+</html>

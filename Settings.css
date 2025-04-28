@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main{
+    height: 90vh;
+    width: 55vh;
+    background-color: black;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: 2px solid black;
+    overflow-x: auto;
+    scrollbar-width: none;
+   
+} */
+.iphoneframe{
+    background-color:black;
+/* background-image: url(iphone-leaf.avif); */
+background-repeat: no-repeat;
+background-size: cover;
+height:570px;
+position:relative;
+overflow: hidden;
+width:300px;
+border: 8px solid black;
+border-radius: 40px;
+ box-sizing: border-box; 
+box-shadow: 0px 0px 0px 0px black;
+margin: auto;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    color: white;
+    background-color: black;
+    margin-top: px;
+    padding-top: 10px;
+}
+.ai{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 30px;
+    width: 330px;
+    margin-left: 10px;
+    margin-top: 5px;
+    gap: 15px;
+    padding: 0 10px;
+    border: none;  
+    
+}
+
+.inp{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.gdg{
+    background-color: white;
+    height: 80px;
+    width: 320px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+}
+
+.image1{
+    background-image: url(car\ 2.jpg);
+    height: 38px;
+    width: 38px; 
+    font-weight: bold;
+    /* padding: 6px 3px; */
+    margin-left: 5px;
+    background-image: url(car\ 2.jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.ann{
+    height: 50px;
+    /* background-color: rgb(46, 110, 158); */
+    display: flex;
+    gap: 15px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+
+.text1{
+    font-size: 15px;
+    padding-top: 10px;
+    /* background-color: blueviolet; */
+    font-weight: bold;
+}
+
+.text1 p{
+    font-size: 13px;
+    font-weight: 100;
+    width: 100px;
+}
+
+.time2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+}
+
+.time{
+    font-size: 14px;
+    padding-bottom: 5px;
+    
+}
+
+.boy{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 13px;
+}
+
+.boy2{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.fav{
+    background-color: white;
+    height: 112px;
+    width: 320px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+
+}
+
+.fav10{
+    background-color: white;
+    height: 145px;
+    width: 320px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+
+}
+
+.fav20{
+    background-color: white;
+    height: 53px;
+    width: 320px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 10px;
+
+}
+
+.fav30{
+    background-color: white;
+    height: 53px;
+    width: 320px;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+
+}
+
+.favourites{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 13px;
+   
+}
+
+.fav1{
+    display: flex;
+    justify-content: space-between;
+    gap: 190px;
+    border-bottom: 1px solid gray;
+}
+
+.fav2{
+    display: flex;
+    justify-content: space-between;
+    gap: 190px;
+    
+}
+
+.bor{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+h4{
+    color: white;
+    margin-top: 10px;
+}
+
+.last{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4px;
+    /* position: fixed;
+    top: 50;
+    right: 20;
+    z-index: 1; */
+    background-color: rgba(50, 49, 49, 0.393);
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+}
+
+.last p{
+    color: white;
+    font-size: 13px;
+}
+
+.icn{
+    font-size: 20px;
+    /* background-color: rgba(0, 0, 0, 0.235); */
+    border: none;
+    background-color:transparent;
+    color: white;
+}
+
+.icn1{
+    font-size: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.bt4{
+    background-color: transparent;
+    border: none;
+}
+.viewed{
+    display: none;
+}
+.viewed-status:focus-within .viewed{
+    display: block;
+}

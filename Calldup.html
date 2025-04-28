@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="callss.css">
+    <title>Phone</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="call.js"></script>
+
+</head>
+<body>
+  <div class="iphone-frame">
+    <div class="container">
+        <div class="butt">
+        <div class="full">
+            <span></span>
+           
+            <button onclick="favorites()">
+                <span class="material-symbols-outlined">
+                    star
+                    </span>
+                <p>Favourites</p>
+               
+            </button>
+        </div>
+        <div class="full">
+          
+            <button onclick="recents()">
+                <span class="material-symbols-outlined">
+                    schedule
+                    </span>
+                <p>Recents</p> 
+             
+            </button>
+        </div> 
+        <div class="full">
+           
+        <button onclick="contact()">
+            <span class="material-symbols-outlined">
+                account_circle
+                </span>
+            <p>Contacts</p></button>
+        </div>
+
+         <div class="full">
+    
+            <button onclick="keypad()"> 
+                <span class="material-symbols-outlined">
+                    apps
+                    </span>
+                <p>Keypad</p></button>
+        </div>
+        
+        
+        <div class="full">
+        <button onclick="voicemal()"> 
+            <span class="material-symbols-outlined">
+                voicemail
+                </span>
+            <p>Voicemail</p></button>
+        </div>
+        </div>
+        <main id="main">
+    
+        </main>
+       
+      
+   
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="editPopup">
+            <h3>Edit Contact</h3>
+            <input type="text" id="editName" placeholder="Enter new name">
+            <input type="text" id="editPhone" placeholder="Enter new phone">
+            <button onclick="saveEdit()">Save Changes</button>
+            <button onclick="closePopup()" style="background: red;">Cancel</button>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

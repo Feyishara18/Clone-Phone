@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Home Screen</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .screen {
+            width: 375px;
+            height: 812px;
+            background: url('wallpaper.jpg') no-repeat center/cover;
+            border-radius: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .app {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width:60px; 
+        }
+
+        .app img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .app-text {
+            color: white;
+            font-size: 12px;
+            margin-top: 5px;
+            white-space: nowrap; /* Prevents text from breaking */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 8px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .dock {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .dock .app img {
+            width: 55px;
+            height: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="app-grid">
+            <div class="app">
+                <img src="youtube.png" alt="YouTube">
+                <div class="app-text">YouTube</div>
+            </div>
+            <div class="app">
+                <img src="facebook.png" alt="Facebook">
+                <div class="app-text">Facebook</div>
+            </div>
+            <div class="app">
+                <img src="capcut.png" alt="CapCut">
+                <div class="app-text">CapCut</div>
+            </div>
+            <div class="app">
+                <img src="tiktok.png" alt="TikTok">
+                <div class="app-text">TikTok</div>
+            </div>
+            <div class="app">
+                <img src="xender.png" alt="Xender">
+                <div class="app-text">Xender</div>
+            </div>
+            <div class="app">
+                <img src="x.png" alt="X">
+                <div class="app-text">X</div>
+            </div>
+            <div class="app">
+                <img src="pinterest.png" alt="Pinterest">
+                <div class="app-text">Pinterest</div>
+            </div>
+            <div class="app">
+                <img src="netflix.png" alt="Netflix">
+                <div class="app-text">Netflix</div>
+            </div>
+            <div class="app">
+                <img src="muslim-pro.png" alt="Muslim Pro">
+                <div class="app-text">Muslim Pro</div>
+            </div>
+            <div class="app">
+                <img src="subway-surf.png" alt="Subway Surf">
+                <div class="app-text">Subway Surf</div>
+            </div>
+            <div class="app">
+                <img src="jumia.png" alt="Jumia">
+                <div class="app-text">Jumia</div>
+            </div>
+            <div class="app">
+                <img src="airtel.png" alt="My Airtel">
+                <div class="app-text">My Airtel</div>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+
+        <div class="dock">
+            <div class="app">
+                <img src="phone.png" alt="Phone">
+                <div class="app-text">Phone</div>
+            </div>
+            <div class="app">
+                <img src="safari.png" alt="Safari">
+                <div class="app-text">Safari</div>
+            </div>
+            <div class="app">
+                <img src="messages.png" alt="Messages">
+                <div class="app-text">Messages</div>
+            </div>
+            <div class="app">
+                <img src="music.png" alt="Music">
+                <div class="app-text">Music</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcode Screen</title>
+    
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background-image.jpg') no-repeat center center/cover;
+        }
+
+        .iphoneframe {
+            background-color: rgb(128, 128, 128);
+            height: 570px;
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            border: 8px solid black;
+            border-radius: 40px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 0px 0px black;
+        } 
+
+        .torchs {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 22px;
+            width: 100px;
+            border-radius: 20px;
+            background-color: black;
+            margin-top: 15px;
+        }  
+
+        .torchs .padlock {
+            color: white;
+            font-size: 14px;
+            margin-top: 4px;
+            padding-left: 4px;
+        }
+
+        h3 {
+            color: white;
+            font-size: 18px;
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-color: transparent;
+            transition:  0.2s;
+        }
+
+        .filled {
+            background-color: white;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 250px;
+            margin: auto;
+        }
+        
+        .key:nth-child(10) {
+            grid-column: 2;
+        }
+
+        .key {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 18px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: 0.2s;
+        }
+
+        .enter {
+            margin-top: 55px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .key:active {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        p {
+            font-size: 11px;
+        }
+
+        .linear {
+            width: 108px;
+            height: 4px;
+            background-color: white;
+            border-radius: 10px;
+            bottom: 10px;
+            margin: auto;
+            position: absolute;
+        }
+
+        .spread {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 100px;
+            color: white;
+            font-size: 16px;
+            position: absolute;
+            bottom: 38px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="iphoneframe">
+        <div class="torchs">
+            <ion-icon name="lock-closed" class="padlock"></ion-icon>
+        </div>
+
+        <div class="enter">
+            <h3>Enter Passcode</h3>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            
+            <p class="error">Passcode Not Correct!</p>
+
+            <div class="keypad">
+                <button class="key">1</button>
+                <button class="key">2<p>ABC</p></button>
+                <button class="key">3<p>DEF</p></button>
+                <button class="key">4<p>GHI</p></button>
+                <button class="key">5<p>JKL</p></button>
+                <button class="key">6<p>MNO</p></button>
+                <button class="key">7<p>PQRS</p></button>
+                <button class="key">8<p>TUV</p></button>
+                <button class="key">9<p>WXYZ</p></button>
+                <button class="key">0</button>
+            </div>
+
+            <div class="linear"></div>
+            <div class="spread">
+                <p>Emergency</p>
+                <p><a href="#" onclick="clearPasscode()">Cancel</a></p>
+            </div>
+        </div>
+   </div>
+
+   <script>
+        const correctPasscode = "123456"; 
+        let enteredPasscode = "";
+        const dots = document.querySelectorAll(".dot");
+        const errorMessage = document.querySelector(".error");
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                if (index < enteredPasscode.length) {
+                    dot.classList.add("filled");
+                } else {
+                    dot.classList.remove("filled");
+                }
+            });
+        }
+
+        function checkPasscode() {
+            if (enteredPasscode.length === 6) {
+                if (enteredPasscode === correctPasscode) {
+                    errorMessage.style.display = "none";
+                    setTimeout(() => {
+                        window.location.href = "homescreen.html";
+                    }, 500);
+                } else {
+                    errorMessage.style.display = "block";
+                    setTimeout(() => {
+                        enteredPasscode = "";
+                        updateDots();
+                        errorMessage.style.display = "none";
+                    }, 1000);
+                }
+            }
+        }
+
+        document.querySelectorAll(".key").forEach(button => )
+            button.addEventListener("click", () =>
+                if (enteredPasscode.length < 6) {
+                    enteredPasscode += button.textContent.trim()
+                    updateDots();
+                    checkPasscode();})

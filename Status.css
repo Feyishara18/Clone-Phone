@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main{
+    height: 90vh;
+    width: 55vh;
+    background-color: black;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: 2px solid black;
+    overflow-x: auto;
+    scrollbar-width: none;
+} */
+.iphoneframe{
+    background-color:black;
+/* background-image: url(iphone-leaf.avif); */
+background-repeat: no-repeat;
+background-size: cover;
+height:570px;
+position:relative;
+overflow: hidden;
+width:300px;
+border: 8px solid black;
+border-radius: 40px;
+ box-sizing: border-box; 
+box-shadow: 0px 0px 0px 0px black;
+margin: auto;
+}
+
+.nav1{
+    position: sticky;
+    top: 0;
+    background-color:black;
+    padding-top: 10px;
+}
+
+.circle22{
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 50%;
+    padding: 4px 5px;
+    /* margin-top: 15px; */
+   
+}
+
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+#circl{
+    font-size: 20px;
+    color: gray;
+}
+
+.ai1{
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    height: 35px;
+    width: 330px;
+    margin-left: 10px;
+    margin-top: 10px;
+    gap: 15px;
+    padding: 0 10px;
+    border: none;
+}
+
+.inp1{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.message33{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    height: 50px;
+    /* margin-top: 13px; */
+    /* margin-left: 10px; */
+    margin-right: px;
+    background-color:  rgb(61, 60, 58);
+    padding: 5px 10px;
+}
+
+.message3{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    height: 50px;
+    margin-top: 13px;
+    padding: 5px 12px;
+    /* margin-left: 10px; */
+    /* margin-right: 35px; */
+    background-color: rgb(61, 60, 58);
+}
+
+.img22{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: rgb(171, 165, 165); */
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 3px;
+    margin-left: 5px;
+    background-image: url(car\ 2.jpg);
+    background-position: center;
+    background-size: contain;
+    border: 3px solid lightgreen;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.img1{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: rgb(171, 165, 165); */
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 3px;
+    margin-left: 5px;
+    background-image: url(car\ 2.jpg);
+    background-position: center;
+    background-size: contain;
+    /* border: 3px solid lightgreen; */
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.chat33{
+    
+}
+.chat22{
+    display: flex;
+    margin-top: 4px;
+    /* gap: 2px; */
+    color: white;
+}
+.chat22 p{
+    /* background-color: blue; */
+    width: 150px;
+}
+
+.chat11{
+    justify-content: left;
+    align-items: start;
+    color: white;
+    margin-right: 90px;
+}
+
+.message11{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-right: 35px;
+}
+
+.message4{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.time{
+    color: white;
+}
+
+h4{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    height: 25px;
+}
+.circl2{
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+    border-radius: 50%;
+    padding: 4px 5px; 
+    /* margin-top: 20px; */
+}
+
+.circl3{
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    margin-left: 30px;
+    border-radius: 50%;
+    padding: 4px 5px; 
+    /* margin-top: 20px; */
+    color: white;
+}
+
+.camera{
+    display: flex;
+   margin-left: -100px;
+   padding: 5px 10px;
+}
+.last{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4px;
+    /* position: fixed;
+    top: 50;
+    right: 20;
+    z-index: 1; */
+    background-color: rgba(50, 49, 49, 0.393);
+}
+
+.last p{
+    color: white;
+    font-size: 13px;
+}
+
+.icn{
+    font-size: 20px;
+    /* background-color: rgba(0, 0, 0, 0.235); */
+    border: none;
+    background-color:transparent;
+    color: white;
+}
+
+.icn1{
+    font-size: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.bt4{
+    background-color: transparent;
+    border: none;
+}
+.viewed{
+    display: none;
+}
+.viewed-status:focus-within .viewed{
+    display: block;
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passcode Screen</title>
+    
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('background-image.jpg') no-repeat center center/cover;
+        }
+
+        /* .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        } */
+        .iphoneframe{
+    background-color:rgb(128, 128, 128);
+    /* background-image: url(iphone-leaf.avif); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:570px;
+    position:relative;
+    overflow: hidden;
+    width:300px;
+    border: 8px solid black;
+    border-radius: 40px;
+     box-sizing: border-box; 
+    box-shadow: 0px 0px 0px 0px black;
+ } 
+ .torchs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 22px;
+    width: 100px;
+  border-radius: 20px;
+    background-color: black;
+    margin-top: 15px;
+  
+ }  
+  .torchs .padlock{
+    color: white;
+    font-size:14px;
+    margin-top: 4px;
+    padding-left: 4px;
+  }
+
+        h3{
+            color: white;
+            /* margin-left:70px; */
+            font-size: 18px;
+           
+        }
+
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap:6px;
+          
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+           /* background-color:rgb(128, 128, 128) ; */
+            border-radius: 50%;
+            border: 2px solid white;
+            background-color: transparent;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap:15px;
+            max-width: 250px;
+            margin: auto;
+        }
+        
+        .key:nth-child(10){
+            grid-column: 2;
+        }
+
+        .key {
+            width: 60px;
+            height:60px;
+            border-radius: 50%;
+            font-size: 18px;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: 0.2s;
+           
+        }
+        .enter{
+            margin-top:55px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .key:active {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        p{
+            font-size: 11px;
+        }
+        .linear{
+            width: 108px;
+            height: 4px;
+            background-color: white;
+            border-radius: 10px;
+            bottom: 10px;
+            margin: auto;
+            position: absolute;
+        }
+        .spread{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:100px;
+        color: white;
+        font-size: 16px;
+        position: absolute;
+        bottom: 38px;
+        }
+        .route{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size:12px;
+        }
+
+    </style>
+</head>
+<body>
+
+   <div class="iphoneframe">
+    <div class="torchs">
+        <ion-icon name="lock-closed" class="padlock"></ion-icon>
+    </div>
+    <div class="enter">
+        <h3>Enter Passcode</h3>
+        <div class="dots">
+            <button name="timmy" class="dot"></button>
+            <button name="timmy" class="dot"></button>
+            <button name="timmy" class="dot"></button>
+            <button name="timmy" class="dot"></button>
+            <button name="timmy" class="dot"></button>
+            <button name="timmy" class="dot"></button>
+        </div>
+    
+        <div class="keypad">
+            <button onclick="myInput('1')" class="key">1</button>
+            <button class="key" onclick="myInput('2')">2
+                <p>ABC</p>  
+            </button>
+            <button class="key" onclick="myInput('3')">
+               3 <p>DEF</p> </button>
+            <button class="key" onclick="myInput('4')">
+                 4 <p>GHI</p> </button>
+            <button class="key" onclick="myInput('5')">
+            5 <p>GKL</p> </button>
+            <button class="key" onclick="myInput('6')">
+                6 <p>MNO</p> </button>
+            <button class="key" onclick="myInput('7')">
+                 7 <p>PQRs</p> </button>
+            <button class="key" onclick="myInput('8')">
+                 8 <p>TUV</p> </button>
+            
+            <button class="key" onclick="myInput('9')">9 <p>WXYZ</p> </button>
+            <button class="key" onclick="myInput('0')">0</button>
+        </div>
+        <div class="linear"></div>
+        <div class="spread">
+            <p>Emergency</p>
+           <button class="route" onclick="goBack()">Cancel</button>
+        </div>
+    </div>
+   </div>
+
+</body>
+</html>
+<script>
+  function goBack(params) {
+    window.location.href = 'Clonephone.html'
+  }
+
+let timmy = document.getElementsByName('timmy')
+
+console.log(timmy);
+
+
+
+let dotsDiv = document.querySelector(".dots");
+
+// dotsDiv.innerHTML = myDots.join(' ');
+
+
+let index = -1;
+
+let myPasscode = "111111"
+
+let unlockCode = ''
+
+function myInput(num) {
+
+
+  
+}
+
+
+</script>

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.iphone-frame{
+    /* background-color:black; */
+    background-color: rgb(143, 136, 136);
+/* background-image: url(iphone-leaf.avif); */
+background-repeat: no-repeat;
+background-size: cover;
+border: 6px solid black;
+height:570px;
+/* position:relative; */
+overflow: hidden;
+width:300px;
+border-radius: 40px;
+ box-sizing: border-box; 
+box-shadow: 0px 0px 0px 0px black;
+margin: auto;
+}
+.torchs {
+ position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+ height: 22px;
+ width: 100px;
+ border-radius: 20px;
+ background-color: black;
+  margin-top: 8px;
+    }  
+ .torchs .padlock{
+ color: white;
+ font-size:14px;
+ margin-top: 4px;
+ padding-left: 4px;
+        }
+ .nav-icon{
+ display: flex;
+/* gap: 5px; */
+ float: right;
+ margin-left:50px;
+ color: white;
+ }
+ .right{
+ margin-right: 12px;
+ }
+ .plus{
+    color:white;
+ font-size: 20px;
+    margin-left: 20px;
+ }
+ .information{
+    color: rgb(74, 69, 69);
+    font-size: 14px;
+    /* background-color: red; */
+    position: absolute;
+   /* right:600px; */
+    margin-top: 25px;
+    margin-left:250px;
+ }
+ .ring{
+    color: white;
+    margin-left:95px;
+    margin-top:60px;
+    font-size:20px;
+ }
+ .number{
+    color: white;
+    font-size:24px;
+    /* margin:auto; */
+    margin-left:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+.up{
+    display:grid;
+    justify-content: space-around;
+    gap: 7px;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: center;
+}
+.down{
+    align-items: center;
+}
+.up{
+    margin-left: 30px;
+    margin-top:100px;
+    /* text-align: center; */
+}
+.down button{
+    /* background-color: blue; */
+    width: 50px;
+    height: 50px;
+    background-color:   rgba(211, 211, 211, 0.114);
+    border:none;
+    border-radius: 50px;
+}
+.down .red{
+ background-color: red;
+  border: none;
+}
+.down span{
+    color:white;
+    font-size:28px;
+}
+.down p{
+    color:white;
+    font-size: 14px;
+}
+.rich{
+    width: 100px;
+    height:4px;
+    border-radius: 20px;
+    background-color:white;
+    /* bottom: 0; */
+    margin: auto;
+    margin-top:160px;
+    margin-left:90px;
+    position: absolute;
+}
+/* .down p{
+text-align: center;
+} */

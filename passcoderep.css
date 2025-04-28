@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center/cover
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+.iphoneframe{
+background-color:rgb(128, 128, 128);
+/* background-image: url(iphone-leaf.avif); */
+background-repeat: no-repeat;
+background-size: cover;
+height:570px;
+position:relative;
+overflow: hidden;
+width:300px;
+border: 8px solid black;
+border-radius: 40px;
+box-sizing: border-box; 
+box-shadow: 0px 0px 0px 0px black;
+} 
+
+
+.torchs {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+height: 22px;
+width: 100px;
+border-radius: 20px;
+background-color: black;
+margin-top: 15px;
+}  
+
+.torchs .padlock{
+color: white;
+font-size:14px;
+margin-top: 4px;
+padding-left: 4px;
+}
+
+h3{
+    color: white;
+    /* margin-left:70px; */
+    font-size: 18px;
+   
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap:6px;
+  
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap:15px;
+    max-width: 250px;
+    margin: auto;
+}
+
+.key:nth-child(10){
+    grid-column: 2;
+}
+
+.key {
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.2s;
+   
+}
+.enter{
+    margin-top:55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.key:active {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.linear{
+    width: 108px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    bottom: 10px;
+    margin: auto;
+    position: absolute;
+}
+.spread{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap:100px;
+color: white;
+font-size: 16px;
+position: absolute;
+bottom: 38px;
+}
+.route{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size:12px;
+}

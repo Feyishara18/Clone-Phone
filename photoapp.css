@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.iphone-frame{
+    background-color: white;
+background-image: url(iphone-leaf.avif);
+background-repeat: no-repeat;
+background-size: cover;
+height:570px;
+position:relative;
+overflow: hidden;
+width:300px;
+border: 8px solid black;
+border-radius: 40px;
+ box-sizing: border-box; 
+box-shadow: 0px 0px 0px 0px black;
+margin: auto;
+}
+
+
+.torch {
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+    height: 22px;
+    /* background-color: red; */
+    align-items: center;
+    /* padding-left: 200px; */
+    /* background-color: black; */
+    padding-left: 20px;
+    gap: 60px;
+}
+
+.torchs {
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    height: 22px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: black;
+    margin-top: 8px;
+    /* z-index: 5; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.torchs .padlock {
+    color: white;
+    font-size: 14px;
+    margin-top: 4px;
+    padding-left: 4px;
+}
+
+.pictures {
+    display: grid;
+    /* align-items: center; */
+    /* scrollbar-width:70px; */
+    /* justify-content: space-around; */
+    border: 1px solid white;
+    gap: 2px;
+    padding: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 40px;
+    height: 570px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* position: relative; */
+    /* background-color: blue; */
+
+}
+
+.pictures img {
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    object-fit: cover;
+
+}
+
+/* .linear-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.linear {
+    width: 108px;
+    height: 4px;
+  background-color:rgb(85, 53, 53);
+    border-radius: 10px;
+    bottom: 10px;
+    /* position: absolute; */
+    /* text-align: center; */
+    margin-left:100px ;
+    /* margin: auto; */
+    /* position: absolute; */
+
+}
+
+.wide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 60px; */
+    /* position: absolute; */
+    gap: 110px;
+    background-color: transparent;
+    /* background-color: aquamarine; */
+}
+
+h2 {
+    color: rgb(1, 1, 1);
+    /* color: black; */
+    font-weight: 200px;
+}
+
+.choose {
+    color: rgb(6, 6, 6);
+    background-color: lightgrey;
+    width: 50px;
+    height: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.pick p {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.bond {
+    background-color:purple;
+    border: none;
+    float: left;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.bond span {
+    color: black;
+    float: left;
+
+}
+
+.next{
+    background-color: red;
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 200px;
+    
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+}
+
+.previous{
+    background-color: green;
+    color: white;
+    position: absolute;
+    bottom: 70px;
+    left: 150px;
+    padding: 5px;
+    font-size: 15px;
+    border: none;
+}
+
+.backButton{
+    background-color: green;
+    color: white;
+    position: absolute;
+    border: none; 
+    right: 220px;
+    height: 30px;
+    width: 70px;
+    top: 0;
+}

@@ -16,12 +16,28 @@ function recents() {
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
+               
             </button>
-    <div class="sortButtons"> <button onclick='sortCalls("all")' >All</button>
-    <button onclick='sortCalls("missed")'>Missed</button>
-    </div>
+            
+              <div class="sortButtons">
+               <button class="shift">Edit</button>  
+   <button onclick='sortCalls("all")' >All</button>
+  <button onclick='sortCalls("missed")'>Missed</button>
+  </div>
+        
+   
     <h1>Recents</h1>
-    <input type="text" id="search-btn" placeholder="Search">
+               <div class="wrapper">
+            <input type="text" id="search-btn" placeholder="Search">
+            <div class="point">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+                    <span class="material-symbols-outlined">
+                        mic
+                        </span>
+            </div>
+        </div>
      <div class="fan">
       <div id="contacts-list">
   
@@ -35,17 +51,22 @@ function recents() {
 
     contactsList.innerHTML = '';
 
-    
+  
     recentCallsArr.forEach((recentCall, index) => {
         console.log(recentCall.name);
         
     contactsList.innerHTML += `<div class="contact">
         <span class="recentCaller"></span>
         <button onclick='showContact(${JSON.stringify(recentCall)}, ${index})' class="contact-btn">${recentCall.name}</button>
-        <span class="time">Yesterday</span>
+        <div class="tote">
+          <span class="time">Yesterday</span>
+         <p class="under">Mobile</p>
+   
+      </div>
+            
         <div>`;
     });
-
+    
     document.querySelectorAll(".recentCaller").forEach((span, index) => {
         span.innerHTML = recentCallsArr[index].name[0];
     })
@@ -227,37 +248,52 @@ function showContact(contact, index) {
     <!-- Action buttons -->
     <div class="actions">
         <div class="action">
-            <i>💬</i>
+           <span class="material-symbols-outlined">
+chat
+</span>
             message
         </div>
         <div id="secondCallBtn" onclick='call2(${JSON.stringify(contact)})' class="action">
-            <i>📞</i>
+           <span class="material-symbols-outlined">
+call
+</span>
             call
         </div>
         <div class="action">
-            <i>📹</i>
+           <span class="material-symbols-outlined">
+videocam
+</span>
             video
         </div>
         <div class="action disabled">
-            <i>✉</i>
+          <span class="material-symbols-outlined">
+mail
+</span>
             mail
         </div>
     </div>
 
-    <!-- Contact info -->
+     <div class="operate">
+     <p>Today</p>
+    <p>3:22pm Incoming Call</p>
+    <p>17 Minutes</p>
+    <p>2:16pm Canceled Call</p>
+    <p>2:14pm Canceled Call</p>
+    
+     </div>
     <div class="info-section">
         <h4>mobile</h4>
         <a href="#" id="phoneNumber">071 083 2193</a>
     </div>
-
-    <!-- Options -->
+       
     <div class="list-options">
-        <div>Send Message</div>
-        <div>Share Contact</div>
-        <div>Add to Favourites</div>
-        <div>Add to Emergency Contacts</div>
-        <div onclick="deleteContact(${index})">Delete Contact</div>
+       <p>Send Message</p>
+       <p>Share Contact</p>
+       <p>Add to Favorite</p>
+       <p>Add to Emergency Contacts</p>
+               <div  class="" onclick="deleteContact(${index})">Block Contact</div>
     </div>
+
 </body>
     `
     avatar.innerHTML = contact.name[0];

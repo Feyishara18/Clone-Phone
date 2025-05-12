@@ -63,9 +63,7 @@ input {
     justify-content: center;
 }
 
-.time{
 
-}
 .my-card {
     margin-bottom: 20px;
 }
@@ -82,6 +80,7 @@ input {
     /* gap: 2px; */
     font-size: 23px;
 }
+
 
 #display {
     font-size: 24px;
@@ -151,26 +150,56 @@ button:hover {
     border-radius: 20px;
     margin-top: 20px;
 }
+#saveContact{
+    color:white;
+}
 
 #search-btn{
-    width: 100%;
-    height: 15px;
+    /* width: 100%; */
+    height: 26px;
+     background-color:rgb(61, 59, 59);
+     color: white;
+   
+     padding-left:25px;
+}
+.wrapper{
+   position: relative;
+   width: 100%;
+   /* max-width: 300px; */
+   /* margin: 20px; */
+   /* background-color: pink; */
+   height: 40px;
+}
+.point{
+    position: absolute;
+    right: 10px;
+    /* background-color: red; */
+    top:10%;
+    display: flex;
+    gap:230px;
+    color: green;
+}
+.point span{
+    color:white;
+    font-size:20px;
+    width: fit-content;
 }
 
 .butt{
     position: absolute;
     top: 88%;
-    background-color: black;
+    background-color:black;
     width: 100%;
-    color: white;
+    color:blue;
     z-index: 1000;
     /* gap: 10px; */
     display: flex;
+    height:50px;
     /* top: 100vh; */
     justify-content: space-around;
     margin-left: -4px;
     /* background-color: green; */
-    /* font-size:10px; */
+    font-size:30px;
 }
 
 .full{
@@ -297,15 +326,17 @@ small{
     justify-content: space-around;
     margin: 25px 0;
     padding: 0 10px;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .action {
     box-sizing: border-box;
-    background: #2c2c2e;
+    background:rgba(128, 128, 128, 0.493);
     padding: 10px;
-    border-radius: 15px;
+    border-radius:6px;
     width: 70px;
-    height: 50px;
+    height: 40px;
     text-align: center;
     cursor: pointer;
     font-size: 12px;
@@ -322,38 +353,80 @@ small{
 
 .action.disabled {
     opacity: 0.3;
+    background-color: rgba(100, 95, 95, 0.842);
     cursor: not-allowed;
 }
 
 .info-section {
-    background: #2c2c2e;
-    padding: 10px;
+    background: #2c2c2ecb;
+    /* padding: 10px; */
     border-radius: 10px;
     margin: 10px 10px;
     height: 45px;
+    text-align: left;
+    margin-bottom:40px;
+}
+#phoneNumber{
+    text-align: left;
 }
 
 
 
 .info-section h4 {
     color: #b0b0b0;
+    text-align: left;
     font-size: 12px;
   
 }
 
 .info-section a {
-    color: #3ea6ff;
+    color:#007aff;
     text-decoration: none;
     font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    margin-right: 40px;
 }
-
+.operate{
+    width: 260px;
+    background-color:rgb(58, 54, 54);
+    height:80px;
+    margin: auto;
+    border-radius: 8px;
+}
+.operate p {
+    font-size:10px;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom:2px;
+    line-height:1.4em;
+}
 .list-options {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
+    background-color:rgb(58, 54, 54);
     margin: 0 10px 80px;
-    height: 200px;
+    border-radius:8px;
+    height:100px;
+    margin: bottom 100px;
     overflow-y: auto;
+}
+.list-options p{
+  text-align: left;
+  border-bottom:  1px solid rgba(211, 211, 211, 0.178);
+  color:#007aff;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.8em;
+}
+
+.odu{
+    background-color: blue;
+    
+    width:260px;
+    /* margin-bottom:100px; */
+
 }
 
 .list-options div {
@@ -363,6 +436,8 @@ small{
     font-size: 12px;
     color: #3ea6ff;
     cursor: pointer;
+    text-align: left;
+    /* overflow:auto; */
 }
 
 .list-options div:last-child {
@@ -455,22 +530,35 @@ small{
     top: 10px;
     right: 15px;
     font-size: 12px;
+    background-color: rgb(21, 237, 21);
     border-radius: 5px;
-    
+    color: white;
+    height: 20px;
+    margin-bottom: 40px;
 }
 
 #call{
     border: none;
     color: white;
 }
+#secondCallBtn span{
+  font-size:16px;
+    color:white;
+    
+}
+.action span{
+    font-size: 16px;
+}
 
 #contactForm{
     position: absolute;
     top: 30%;
+    z-index: 5;
     /* left: 25%; */
     background-color: #1e1e1f;
     padding: 10px;
     width: 90%;
+    margin-left: 20px;
 }
 
 #main{
@@ -557,11 +645,21 @@ z-index: 1200;
     /* background-color: green; */
 }
 
+.contact .time{
+    color: red;
+    font-size: 14px;
+}
+
 #icon-label{
     font-size: 12px;
     color: white;
 }
-
+.under{
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: left;
+}
 .demos button {
 /* background: radial-gradient(circle, #2a3b26 30%, #0d0d0d 80%); */
 background: none;
@@ -601,25 +699,36 @@ width: 100%;
 /* background-color:grey; */
 text-align: center;
 margin:10px 0px;
+/* background-color: grey; */
+
 }
 .fan{
     display: flex;
     justify-content: space-around;
     gap: 40px;
 }
-.fan span{
-    /* font-size: 8px; */
-    /* color: blue; */
-}
 
+
+  .shift{
+    background-color: blue;
+    color: white;
+    width:50px;
+    height:20px;
+    /* margin-left:60px; */
+    /* top: 12vh; */
+    margin: top 10px;;
+    /* position:absolute; */
+    border: none;
+    border-radius:3px;
+}
 
 .sortButtons button{
 padding: 7px;
 margin: 3px;
 background-color:rgb(61, 59, 59) ;
-border-radius: 2px;
-color: white;
-height: 20px;
+border-radius: 4px;
+color:blue;
+height:30px;
 text-align: center;
 font-size: 13px;
 }

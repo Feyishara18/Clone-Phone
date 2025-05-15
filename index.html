@@ -274,7 +274,7 @@ window.myInput = function(value) {
                <span>Photos</span>
 </div>
           <div class="app"> 
-<button><img src="camera_app-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
+<button class="hello-btn" onclick="camera()"><img src="camera_app-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
             <span>Camera</span>
           </div> 
            <div class="app"> 
@@ -1346,7 +1346,7 @@ function openPhone() {
                 <span>Photos</span>
  </div>
            <div class="app"> 
- <button><img src="camera_app-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
+ <button class="hello-btn" onclick="camera()"><img src="camera_app-removebg-preview.png" alt="" style="width: 100px; height: 50px;"></button>
              <span>Camera</span>
            </div> 
             <div class="app"> 
@@ -2330,5 +2330,49 @@ function toggleSongs() {
   const panel = document.getElementById("songsPanel");
   panel.classList.toggle("active");
 }
+
+        const video = document.getElementById("video");
+        const canvas = document.getElementById("canvas");
+        const photo = document.getElementById("photo");
+        const captureBtn = document.getElementById("capture");
+        let stream = null;
+
+
+        
+        async function camera() {
+
+             iphoneframe.innerHTML = `
+         <button class="backbtn" onclick="myWay()">Back</button>
+    <video id="video" autoplay playsinline></video>
+    <button id="capture">Take Photo</button>
+    <canvas id="canvas"></canvas>
+    <img id="photo" alt="Captured Photo">`
+
+
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("Error accessing camera:", error);
+            }
+        }
+
+        
+        captureBtn.addEventListener("click", () => {
+            const context = canvas.getContext("2d");
+
+            const iphoneWidth = 375;
+            const iphoneHeight = 812;
+            
+            canvas.width = iphoneWidth
+            canvas.height = iphoneHeight;
+            
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            
+            const imageData = canvas.toDataURL("image/png");
+            photo.src = imageData;
+        });
+
 
 </script>

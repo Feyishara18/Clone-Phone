@@ -738,3 +738,20 @@ font-size: 13px;
     font-size: 15px;
 }
 
+
+    video {
+    width: 375px; /* Example: iPhone 12 width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 20px; /* Optional: Rounds corners */
+    object-fit: cover; /* Ensures it fills the space */
+}
+
+
+.backbtn{
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
